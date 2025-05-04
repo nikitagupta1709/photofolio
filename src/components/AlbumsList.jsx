@@ -11,7 +11,6 @@ const AlbumsList = () => {
     const [loading, setLoading] = useState(true);
     const [selectedAlbum, setSelectedAlbum] = useState(null);
     const [showForm, setShowForm] = useState(false);
-    const [selectedAlbumId, setSelectedAlbumId] = useState(null);
     const [loadingAlbumId, setLoadingAlbumId] = useState(null);
     const [albumToEdit, setAlbumToEdit] = useState(null);  // State to handle album edit
 
