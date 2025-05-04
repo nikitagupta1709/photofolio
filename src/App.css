@@ -1,38 +1,150 @@
-.App {
+body {
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+  font-family: 'Arial', sans-serif;
+  /* color: #fff; */
+}
+
+.spinner-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.album-list-scrollable {
+  max-height: 70vh;
+  /* Adjust height as needed */
+  overflow-y: auto;
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  background-color: #fefefe;
+}
+
+.album-card {
+  transition: all 0.2s ease;
+  border: 1px solid #dee2e6;
+}
+
+.album-card:hover {
+  background-color: #f8f9fa;
+}
+
+.selected-album {
+  background-color: #e7f1ff;
+  border-left: 4px solid #0d6efd;
+  font-weight: 600;
+}
+
+.image-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #dee2e6;
+}
+
+.image-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 2;
+}
+
+.image-card:hover .image-overlay {
+  opacity: 1;
+}
+
+.spinner-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.carousel-image-wrapper {
+  position: relative;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.carousel-image {
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.carousel-container {
+  position: relative;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.carousel-caption {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Dark background with transparency */
   color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  top: 15px;
+  /* Keep the caption above the image */
+  margin-bottom: 15px;
+  /* Add space between title and image */
 }
 
-.App-link {
-  color: #61dafb;
+.carousel-image-wrapper {
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.carousel-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+}
+
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
